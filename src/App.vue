@@ -1,24 +1,28 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import MenuNavigation from "./components/MenuNavigation.vue";
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
+    <RouterLink to="/" class="logo-link">
+      <img
+        alt="Vue logo"
+        class="logo"
+        src="@/assets/logo.jpg"
+        width="125"
+        height="125"
     />
+    </RouterLink>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+      <MenuNavigation  msg="You did it!" />
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <RouterLink to="/takeaway" class="nav-item ">Прайс самовывоз</RouterLink>
+        <RouterLink to="/delivery" class="nav-item ">Прайс доставка</RouterLink>
+        <a class="nav-item ">Telegram</a>
+        <a class="nav-item ">87757804880</a>
+        <RouterLink to="/contact" class="nav-item ">Контакты</RouterLink>
       </nav>
     </div>
   </header>
@@ -29,7 +33,11 @@ import HelloWorld from "./components/HelloWorld.vue";
 <style scoped>
 header {
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
   max-height: 100vh;
+  margin-top: 16px;
 }
 
 .logo {
@@ -41,11 +49,11 @@ nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: var(--base-blue);
 }
 
 nav a.router-link-exact-active:hover {
@@ -54,19 +62,32 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  padding: 1rem 1rem;
+  border: 1px solid var(--base-orange);
+  border-radius: 10px;
+  width: 100%;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 12px;
+  font-style: oblique;
+  font-weight: 600;
+}
+nav a:hover,nav a:active  {
+  background: var(--base-blue);
+  color: var(--vt-c-white);
+  border: 1px solid transparent;
 }
 
-nav a:first-of-type {
-  border: 0;
+.logo-link, .logo-link:hover,.logo-link:active  {
+  background: none;
+  border: none;
 }
-
 @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    width: 60%;
+    margin: 0 auto;
   }
 
   .logo {
@@ -77,15 +98,21 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   nav {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
-
+    justify-content: space-between;
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+  nav a {
+    width: 20%;
+    padding-bottom: 1rem;
+    flex-basis: 29.333333%;
   }
 }
 </style>
