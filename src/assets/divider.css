@@ -1,0 +1,13 @@
+.divider h2 {
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    #footer {
+        display: flex;
+        place-items: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+}

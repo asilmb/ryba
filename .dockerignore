@@ -1,0 +1,4 @@
+# Git repository meta information
+**/.git
+node_modules
+npm-debug.log
