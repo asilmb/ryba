@@ -12,9 +12,6 @@
     color: var(--base-blue);
 }
 
-.menu-navigator nav a.router-link-exact-active:hover {
-    background-color: transparent;
-}
 
 .menu-navigator nav a {
     display: inline-block;

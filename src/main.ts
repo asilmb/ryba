@@ -8,6 +8,12 @@ import "./assets/css/header.css";
 import "./assets/css/menu-navigator.css";
 import "./assets/css/divider.css";
 import "./assets/css/contacts.css"
+export default {
+    props: {
+        mapConfig: Object,
+        apiKey: String,
+    }
+}
 const app = createApp(App);
 
 app.use(router);
