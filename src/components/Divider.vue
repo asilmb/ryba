@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+defineProps<{
+  ttle: string;
+}>();
 </script>
 
 <template>
@@ -9,7 +11,7 @@
 
     </div>
     <div class="col-sm">
-      <h2>Контакты</h2>
+      <h2>{{ ttle }}</h2>
     </div>
     <div class="col-sm">
       <hr/>

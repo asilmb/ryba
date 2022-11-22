@@ -9,19 +9,11 @@ import Contacts from "./components/Contacts.vue";
 <template>
   <div class="container">
     <header class="header">
-      <RouterLink to="/" class="logo-link">
-        <img
-            alt="Vue logo"
-            class="logo"
-            src="@/assets/logo.jpg"
-            width="125"
-            height="125"
-        />
-      </RouterLink>
-      <MenuNavigation/>
+
+    <MenuNavigation/>
     </header>
     <RouterView />
-    <Divider/>
+    <Divider ttle="Контакты"></Divider>
     <footer id="footer">
       <Contacts/>
     </footer>

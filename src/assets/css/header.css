@@ -7,11 +7,6 @@
     margin-top: 16px;
 }
 
-.header .logo {
-    display: block;
-    margin: 0 auto 2rem;
-}
-
 .header .logo-link,.header .logo-link:hover,.header .logo-link:active  {
     background: none;
     border: none;
@@ -24,11 +19,8 @@
     .header {
         display: flex;
         place-items: center;
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
     }
 
-    .header .logo {
-        margin: 0 2rem 0 0;
-    }
 }

@@ -1,0 +1,116 @@
+.menu-navigator {
+    width: 100%;
+}
+.menu-navigator nav {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.menu-navigator nav a.router-link-exact-active {
+    color: var(--base-blue);
+}
+
+.menu-navigator nav a.router-link-exact-active:hover {
+    background-color: transparent;
+}
+
+.menu-navigator nav a {
+    display: inline-block;
+    padding: 1rem 1rem;
+    border: 1px solid var(--base-orange);
+    border-radius: 10px;
+    width: 100%;
+    align-self: stretch;
+    text-align: center;
+    margin-bottom: 12px;
+    font-style: oblique;
+    font-weight: 600;
+}
+
+.menu-navigator nav a:hover, .menu-navigator nav a:active {
+    background: var(--base-blue);
+    color: var(--vt-c-white);
+    border: 1px solid transparent;
+}
+
+.menu-navigator .logo-link, .menu-navigator .logo-link:hover, .menu-navigator .logo-link:active {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html a, html p, html span {
+    font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+
+    html a, html p, html span {
+        font-size: 12px;
+    }
+
+    .menu-navigator nav {
+        text-align: left;
+        font-size: 1rem;
+        justify-content: space-between;
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+
+    .menu-navigator nav a {
+        width: 20%;
+        padding-bottom: 1rem;
+        flex-basis: 29.333333%;
+    }
+
+    .logo-block {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-block .logo-link {
+        display: block;
+        width: 25%;
+        height: 20vh;
+        background: transparent url(src/assets/images/logo.jpg) no-repeat center;
+        background-size: contain;
+    }
+
+    .logo-block .logo-decoration {
+        width: 25%;
+        height: 20vh;
+        background: url(src/assets/images/wave.png) no-repeat center top;
+        background-size: 110%;
+    }
+
+    .logo-block .logo-decoration.logo-decoration_right {
+        transform: scaleX(-1);
+    }
+
+    .logo-block .logo-link,.header .logo-link:hover,.header .logo-link:active  {
+        border: none;
+        display: block;
+        background-size: contain;
+        width: 25%;
+        height: 20vh;
+        background: transparent url(src/assets/images/logo.jpg) no-repeat center;
+        background-size: contain;
+    }
+
+}
+
+@media (min-width: 1240px) {
+
+    html a, html p, html span {
+        font-size: 16px;
+    }
+
+    .header .logo {
+        margin: 0 2rem 0 0;
+    }
+}

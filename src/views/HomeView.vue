@@ -1,4 +1,9 @@
+<script setup lang="ts">
+import Divider from "./../components/Divider.vue";
+</script>
+
 <template>
+  <Divider ttle="О компании"></Divider>
   <div class="row present-row">
     <div class="col-sm text-center present-row-item ">
       <p>
@@ -19,14 +24,14 @@
     <div class="col-sm text-center present-row-item col-image ">
       <img alt="Vue logo"
            class="logo"
-           src="@/assets/logo.jpg"
+           src="@/assets/images/logo.jpg"
            width="100%"
       />
     </div>
     <div class="col-sm text-center present-row-item ">
       <img alt="Vue logo"
            class="logo"
-           src="@/assets/logo.jpg"
+           src="@/assets/images/logo.jpg"
            width="100%"
       />
     </div>
@@ -69,7 +74,7 @@
       <img
           alt="Vue logo"
           class="logo"
-          src="@/assets/logo.jpg"
+          src="@/assets/images/logo.jpg"
           width="100%"
       />
     </div>
@@ -77,7 +82,7 @@
       <img
           alt="Vue logo"
           class="logo"
-          src="@/assets/logo.jpg"
+          src="@/assets/images/logo.jpg"
           width="100%"
       />
     </div>
